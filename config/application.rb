@@ -15,5 +15,16 @@ module Clinics
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.autoload_paths << "#{Rails.root}/app/forms"
+    config.eager_load_paths << "#{Rails.root}/app/forms"
+    config.autoload_paths << "#{Rails.root}/app/repositories"
+    config.eager_load_paths << "#{Rails.root}/app/repositories"
+    config.autoload_paths << "#{Rails.root}/app/mappers"
+    config.eager_load_paths << "#{Rails.root}/app/mappers"
+    config.autoload_paths << "#{Rails.root}/app/services"
+    config.eager_load_paths << "#{Rails.root}/app/services"
+    config.autoload_paths << "#{Rails.root}/app/decorators"
+    config.eager_load_paths << "#{Rails.root}/app/decorators"
   end
 end

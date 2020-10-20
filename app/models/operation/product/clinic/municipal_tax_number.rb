@@ -1,6 +1,6 @@
-class Operation::Product::Clinic::MunicipalTaxNumber < ApplicationRecord
+class Operation::Product::Clinic::CityRegistration < ApplicationRecord
 
-  self.table_name = "clinic_municipal_tax_numbers"
+  self.table_name = "clinic_city_registrations"
   
   # Relations
   belongs_to :clinic, class_name: "Operation::Product::Entity", foreign_key: "clinic_id"

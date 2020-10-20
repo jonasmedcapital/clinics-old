@@ -65,10 +65,10 @@ Rails.application.routes.draw do
           put "date/update", to: "date#update"
           
           namespace :clinics do
-            post "articles_of_associations/create", to: "articles_of_associations#create"
-            post "articles_of_associations/read", to: "articles_of_associations#read"
-            post "articles_of_associations/list", to: "articles_of_associations#list"
-            put "articles_of_associations/update", to: "articles_of_associations#update"
+            post "social_contracts/create", to: "social_contracts#create"
+            post "social_contracts/read", to: "social_contracts#read"
+            post "social_contracts/list", to: "social_contracts#list"
+            put "social_contracts/update", to: "social_contracts#update"
 
             post "cnaes/create", to: "cnaes#create"
             post "cnaes/read", to: "cnaes#read"
@@ -85,10 +85,10 @@ Rails.application.routes.draw do
             post "licenses/list", to: "licenses#list"
             put "licenses/update", to: "licenses#update"
 
-            post "municipal_tax_numbers/create", to: "municipal_tax_numbers#create"
-            post "municipal_tax_numbers/read", to: "municipal_tax_numbers#read"
-            post "municipal_tax_numbers/list", to: "municipal_tax_numbers#list"
-            put "municipal_tax_numbers/update", to: "municipal_tax_numbers#update"
+            post "city_registration/create", to: "city_registration#create"
+            post "city_registration/read", to: "city_registration#read"
+            post "city_registration/list", to: "city_registration#list"
+            put "city_registration/update", to: "city_registration#update"
 
             post "observations/create", to: "observations#create"
             post "observations/read", to: "observations#read"

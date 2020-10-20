@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   # include CpfValidates
-  # extend FriendlyId
-  # friendly_id :cpf, use: :slugged
+  
+  extend FriendlyId
+  friendly_id :cpf, use: :slugged
 
   devise :database_authenticatable, :registerable, :confirmable, :timeoutable, 
          :recoverable, :rememberable, :validatable, :trackable#, :lockable, authentication_keys: [ :cpf ]
