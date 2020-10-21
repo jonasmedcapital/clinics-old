@@ -7,7 +7,7 @@ class Operations::Products::Clinics::Corporate::SocialContracts::Read
   end
 
   def social_contract
-    ::Operations::Products::Clinics::Corporate::SocialContractRepository.find_by_id(@social_contract_params[:id])
+    ::Operations::Products::Clinics::Corporates::SocialContractRepository.find_by_id(@social_contract_params[:id])
   end
 
   def status
@@ -27,7 +27,7 @@ class Operations::Products::Clinics::Corporate::SocialContracts::Read
   end
 
   def data
-    cln = ::Operations::Products::Clinics::Corporate::SocialContractRepository.read(@social_contract)
+    cln = ::Operations::Products::Clinics::Corporates::SocialContractRepository.read(@social_contract)
     
     if cln.empty?
       @status = :ok

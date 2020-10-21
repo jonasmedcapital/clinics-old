@@ -8,7 +8,7 @@ class Operations::Products::Clinics::Corporate::Cnaes::Update
   end
 
   def cnae
-    @cnae ||= ::Operations::Products::Clinics::Corporate::CnaeRepository.find_by_id(@cnae_params[:id])
+    @cnae ||= ::Operations::Products::Clinics::Corporates::CnaeRepository.find_by_id(@cnae_params[:id])
   end
 
   def save
@@ -34,7 +34,7 @@ class Operations::Products::Clinics::Corporate::Cnaes::Update
   
   def data
     if @data
-      cln = ::Operations::Products::Clinics::Corporate::CnaeRepository.read(@cnae)
+      cln = ::Operations::Products::Clinics::Corporates::CnaeRepository.read(@cnae)
     else
       cln = []
     end

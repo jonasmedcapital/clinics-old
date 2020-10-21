@@ -5,7 +5,7 @@ class Operations::Products::Clinics::Corporate::Partners::List
   end
 
   def partners
-    ::Operations::Products::Clinics::Corporate::PartnerRepository.all_active
+    ::Operations::Products::Clinics::Corporates::PartnerRepository.all_active
   end
 
   def status
@@ -25,7 +25,7 @@ class Operations::Products::Clinics::Corporate::Partners::List
   end
 
   def data
-    cln = ::Operations::Products::Clinics::Corporate::PartnerRepository.list_all(@partners)
+    cln = ::Operations::Products::Clinics::Corporates::PartnerRepository.list_all(@partners)
     
     if cln.empty?
       @status = :ok

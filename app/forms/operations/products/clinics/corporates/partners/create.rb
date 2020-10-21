@@ -7,7 +7,7 @@ class Operations::Products::Clinics::Corporates::Partners::Create
   end
 
   def partner
-    ::Operations::Products::Clinics::Corporate::PartnerRepository.build(@partner_params)
+    ::Operations::Products::Clinics::Corporates::PartnerRepository.build(@partner_params)
   end
   
   def save
@@ -32,7 +32,7 @@ class Operations::Products::Clinics::Corporates::Partners::Create
   
   def data
     if @data
-      cln = ::Operations::Products::Clinics::Corporate::PartnerRepository.read(@partner)
+      cln = ::Operations::Products::Clinics::Corporates::PartnerRepository.read(@partner)
     else
       cln = []
     end

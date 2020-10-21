@@ -5,7 +5,7 @@ class Operations::Products::Clinics::Corporate::SocialContracts::List
   end
 
   def socail_contracts
-    ::Operations::Products::Clinics::Corporate::SocialContractRepository.all_active
+    ::Operations::Products::Clinics::Corporates::SocialContractRepository.all_active
   end
 
   def status
@@ -25,7 +25,7 @@ class Operations::Products::Clinics::Corporate::SocialContracts::List
   end
 
   def data
-    cln = ::Operations::Products::Clinics::Corporate::SocialContractRepository.list_all(@socail_contracts)
+    cln = ::Operations::Products::Clinics::Corporates::SocialContractRepository.list_all(@socail_contracts)
     
     if cln.empty?
       @status = :ok

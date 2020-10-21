@@ -7,7 +7,7 @@ class Operations::Products::Clinics::Corporates::SocialContracts::Create
   end
 
   def social_contract
-    ::Operations::Products::Clinics::Corporate::SocialContractRepository.build(@social_contract_params)
+    ::Operations::Products::Clinics::Corporates::SocialContractRepository.build(@social_contract_params)
   end
   
   def save
@@ -32,7 +32,7 @@ class Operations::Products::Clinics::Corporates::SocialContracts::Create
   
   def data
     if @data
-      cln = ::Operations::Products::Clinics::Corporate::SocialContractRepository.read(@social_contract)
+      cln = ::Operations::Products::Clinics::Corporates::SocialContractRepository.read(@social_contract)
     else
       cln = []
     end

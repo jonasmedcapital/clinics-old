@@ -7,7 +7,7 @@ class Operations::Products::Clinics::Corporate::Cnaes::Read
   end
 
   def cnae
-    ::Operations::Products::Clinics::Corporate::CnaeRepository.find_by_id(@cnae_params[:id])
+    ::Operations::Products::Clinics::Corporates::CnaeRepository.find_by_id(@cnae_params[:id])
   end
 
   def status
@@ -27,7 +27,7 @@ class Operations::Products::Clinics::Corporate::Cnaes::Read
   end
 
   def data
-    cln = ::Operations::Products::Clinics::Corporate::CnaeRepository.read(@cnae)
+    cln = ::Operations::Products::Clinics::Corporates::CnaeRepository.read(@cnae)
     
     if cln.empty?
       @status = :ok

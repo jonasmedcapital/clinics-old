@@ -7,7 +7,7 @@ class Operations::Products::Clinics::Corporates::Cnaes::Create
   end
 
   def cnae
-    ::Operations::Products::Clinics::Corporate::CnaeRepository.build(@cnae_params)
+    ::Operations::Products::Clinics::Corporates::CnaeRepository.build(@cnae_params)
   end
   
   def save
@@ -32,7 +32,7 @@ class Operations::Products::Clinics::Corporates::Cnaes::Create
   
   def data
     if @data
-      cln = ::Operations::Products::Clinics::Corporate::CnaeRepository.read(@cnae)
+      cln = ::Operations::Products::Clinics::Corporates::CnaeRepository.read(@cnae)
     else
       cln = []
     end

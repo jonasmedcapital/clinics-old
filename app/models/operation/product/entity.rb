@@ -19,8 +19,8 @@ class Operation::Product::Entity < ApplicationRecord
   validates :uniq_product, uniqueness: { case_sensitive: false, message: "A Conta Produto já existe. " }
 
   #Enums
-  enum name: { medpj: 0, medpf: 1, medfat: 2, medseg: 3, medfin: 4 }, _prefix: :_
-  enum kind: { receivement: 0, practice: 1 }, _prefix: :_
+  enum name: { medpj: 0, medpf: 1, medfat: 2, medseg: 3, medfin: 4, medclin: 5 }, _prefix: :_
+  enum kind: { receivement: 0, practice: 1, clinic: 2 }, _prefix: :_
 
   #Callbacks
   before_validation :set_uniq_product

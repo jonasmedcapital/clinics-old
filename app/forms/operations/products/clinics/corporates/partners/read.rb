@@ -7,7 +7,7 @@ class Operations::Products::Clinics::Corporate::Partners::Read
   end
 
   def partner
-    ::Operations::Products::Clinics::Corporate::PartnerRepository.find_by_id(@partner_params[:id])
+    ::Operations::Products::Clinics::Corporates::PartnerRepository.find_by_id(@partner_params[:id])
   end
 
   def status
@@ -27,7 +27,7 @@ class Operations::Products::Clinics::Corporate::Partners::Read
   end
 
   def data
-    cln = ::Operations::Products::Clinics::Corporate::PartnerRepository.read(@partner)
+    cln = ::Operations::Products::Clinics::Corporates::PartnerRepository.read(@partner)
     
     if cln.empty?
       @status = :ok

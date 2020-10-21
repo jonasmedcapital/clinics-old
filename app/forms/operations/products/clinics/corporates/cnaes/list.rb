@@ -5,7 +5,7 @@ class Operations::Products::Clinics::Corporate::Cnaes::List
   end
 
   def cnaes
-    ::Operations::Products::Clinics::Corporate::CnaeRepository.all_active
+    ::Operations::Products::Clinics::Corporates::CnaeRepository.all_active
   end
 
   def status
@@ -25,7 +25,7 @@ class Operations::Products::Clinics::Corporate::Cnaes::List
   end
 
   def data
-    cln = ::Operations::Products::Clinics::Corporate::CnaeRepository.list_all(@cnaes)
+    cln = ::Operations::Products::Clinics::Corporates::CnaeRepository.list_all(@cnaes)
     
     if cln.empty?
       @status = :ok

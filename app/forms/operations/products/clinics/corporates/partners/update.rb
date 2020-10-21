@@ -8,7 +8,7 @@ class Operations::Products::Clinics::Corporate::Partners::Update
   end
 
   def partner
-    @partner ||= ::Operations::Products::Clinics::Corporate::PartnerRepository.find_by_id(@partner_params[:id])
+    @partner ||= ::Operations::Products::Clinics::Corporates::PartnerRepository.find_by_id(@partner_params[:id])
   end
 
   def save
@@ -34,7 +34,7 @@ class Operations::Products::Clinics::Corporate::Partners::Update
   
   def data
     if @data
-      cln = ::Operations::Products::Clinics::Corporate::PartnerRepository.read(@partner)
+      cln = ::Operations::Products::Clinics::Corporates::PartnerRepository.read(@partner)
     else
       cln = []
     end
